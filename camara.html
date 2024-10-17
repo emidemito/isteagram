@@ -9,15 +9,22 @@
 </head>
 <body>
     <header>
-        <h1>Tomar Fotografía</h1>
+        <h1>Cámara</h1>
     </header>
 
     <main>
-        <video id="video" autoplay></video> <!-- Video para la vista previa -->
-        <img id="img-preview" src="icons/No Image.png" alt="Vista previa de la imagen">
-        <input type="text" id="title-input" placeholder="Título de la foto">
-        <button id="publish-button">Publicar</button>
+        <video id="video" autoplay></video> 
+        <button id="capture-button">
+            <img src="icons/shutter.png" alt="Capturar">
+        </button>
+
         <button id="cancel-button">Cancelar</button>
+        <img id="img-preview" style="display:none;"> 
+        
+        
+        <input type="text" id="image-title" placeholder="Ingresa un título para la imagen" style="display:none;">
+
+        <button id="publish-button" style="display:none;">Publicar</button>
     </main>
 
     <script src="camera.js"></script>

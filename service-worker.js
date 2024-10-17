@@ -1,5 +1,3 @@
-// service-worker.js
-
 const CACHE_NAME = 'isteagram-cache-v1';
 const urlsToCache = [
   '/',
@@ -12,7 +10,7 @@ const urlsToCache = [
   '/icons/icon-512x512.png'
 ];
 
-// Instalar el Service Worker y cachear archivos
+
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -23,7 +21,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activar el Service Worker
+
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -39,7 +37,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Interceptar las peticiones y servir archivos desde el caché
+
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
